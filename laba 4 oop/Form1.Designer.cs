@@ -38,7 +38,8 @@ namespace laba_4_oop
             this.ClientSize = new System.Drawing.Size(1256, 717);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.PrintFigures);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.ResumeLayout(false);
 
         }
