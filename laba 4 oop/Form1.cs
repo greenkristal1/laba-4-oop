@@ -23,7 +23,20 @@ namespace laba_4_oop
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            st.setObject(st.countRealObjects(), new Circle(50, e.X, e.Y));
+            if (st.countRealObjects() != 0)
+            {
+                for (int i = 0; i < st.countRealObjects(); i++)
+                {
+                    int x = ((st.getObject(i) as Circle).LX);
+                    int y = ((st.getObject(i) as Circle).LY);
+                    if ((e.X >= x && e.X <= x + 50) && (e.Y >= y && e.Y <= y + 50))
+                    {
+                        gr.DrawEllipse(Pens.Blue, (st.getObject(i) as Circle).LX, (st.getObject(i) as Circle).LY, (st.getObject(i) as Circle).Radius, (st.getObject(i) as Circle).Radius);
+                        return;
+                    }
+                }
+            }
+                st.setObject(st.countRealObjects(), new Circle(50, e.X -25 , e.Y - 25));
             this.Refresh();
             
             
