@@ -41,6 +41,8 @@ namespace laba_4_oop
                 {
                     gr.FillEllipse(Brushes.Red, (st.getObject(i) as Circle).LX, (st.getObject(i) as Circle).LY, (st.getObject(i) as Circle).Radius, (st.getObject(i) as Circle).Radius);
                     }
+
+                gr.DrawEllipse(Pens.Blue, (st.getObject(st.countRealObjects()-1) as Circle).LX, (st.getObject(st.countRealObjects() - 1) as Circle).LY, (st.getObject(st.countRealObjects() - 1) as Circle).Radius, (st.getObject(st.countRealObjects() - 1) as Circle).Radius);
             }
             
         }
