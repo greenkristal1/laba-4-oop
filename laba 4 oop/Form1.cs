@@ -25,6 +25,10 @@ namespace laba_4_oop
         {
             if (st.countRealObjects() != 0)
             {
+                for(int i = 0; i < st.countRealObjects(); i++)
+                {
+                    gr.DrawEllipse(Pens.White, (st.getObject(i) as Circle).LX, (st.getObject(i) as Circle).LY, (st.getObject(i) as Circle).Radius, (st.getObject(i) as Circle).Radius);
+                }
                 for (int i = 0; i < st.countRealObjects(); i++)
                 {
                     int x = ((st.getObject(i) as Circle).LX);
